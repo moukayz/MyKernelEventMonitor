@@ -1,0 +1,20 @@
+﻿Kernel Event:
+ImageLoad: ImageLoad -- ImageLoadTraceData
+
+Process: Process/Start/Stop -- ProcessTraceData
+
+FileIOInit: FileIO/Create -- FileIOCreateTraceData
+                  /Delete/Rename -- FileIOInfoTraceData
+				  /DirEnum -- FileIODirEnumTraceData
+				  /Read/Write -- FileIOReadWriteTraceData
+
+Registry: RegistryDelete/DeleteKey/Create/SetValue -- RegistryTraceData
+
+TcpIp: TcpIp/Send -- TcpIpSendTraceData
+	   /Accept/Connect -- TcpIpConnectTraceData
+	   /Recv -- TcpIpTraceData
+
+UdpIp: UdpIp/Send/Recv -- UdpIpTraceData
+
+EventPayload:
+ImageLoad -- FileName
